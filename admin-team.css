@@ -1,4 +1,4 @@
-@import "css/global.css";
+@import "global.css";
 
 /*Header*/
 #header {
@@ -194,4 +194,5 @@
     #admin-team .group .users .user .name {
         font-size: 20px;
     }
+
 }
