@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/pages/rules.css">
 
-  <title>AzureMine | Rules</title>
+  <title>RoyalMC | Rules</title>
 </head>
 <body>
   <!--Navbar-->
@@ -127,5 +127,972 @@
   </footer>
 </body>
 <script src="js/script.js"></script>
-<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/cbf5ee59c8.js" crossorigin="anonymous">
+  /*
+Configuration
+------------------------
+If something doesn't work please contact me on discord (Astronawta#0012).
+*/
+
+const config = {
+    serverInfo: {
+        serverLogoImageFileName: "logo.png", /*This is a file name for logo in /images/ (If you upload new logo with other name, you must change this value)*/
+        serverName: "RoyalMC", /*Server name*/
+        serverIp: "RoyalMC.RoyalClouds.qzz.io", /*Server IP (if you want to add online user counter, you must have true the enable-status and enable-query of server.properties)*/
+        discordServerID: "489529070913060867" /*Your server ID (if you want to add online user counter, you must have enabled Discord server widget)*/
+    },
+
+    /*Admin-Team
+    ------------
+    If you want to create new group, you must add this structure to adminTeamPage:
+    <nameOfGroup>: [
+        {
+            inGameName: "laggglaggg",
+            rank: "Owner",
+            skinUrlOrPathToFile: "",
+            rankColor: ""
+        },
+    ]
+    then you must add this group with same name to atGroupsDefaultColors and set the color you want for the group.
+    You can also set a special color for a specific user, just put it in the rankColor of that user.
+
+    All skins for original players are generate automaticaly. If you want to add skins to warez players, yout must add url for skin to skinUrlOrPathToFile
+        {
+            inGameName: "laggglaggg",  <--- In-Game name
+            rank: "Owner",  <-- rank
+            skinUrlOrPathToFile: "",  <-- url or file path for skin image for warez players (if you have original minecraft leave it be empty)
+            rankColor: "rgba(255, 3, 3, 1)"  <-- special rank color
+        },
+
+    If you want to change skin type replace userSKinTypeInAdminTeam with something you want from array in comments
+    */
+    userSKinTypeInAdminTeam: "bust", /*[full, bust, head, face, front, frontFull, skin]*/
+    atGroupsDefaultColors: {
+        leaders: "rgba(255, 124, 124, 0.5)",
+        developers: "rgba(230, 83, 0, 0.5)",
+        helpers: "rgba(11, 175, 255, 0.5)",
+        builders: "rgba(247, 2, 176, 0.5)",
+    },
+    adminTeamPage: {
+        leaders: [
+            {
+                inGameName: "laggglaggg",
+                rank: "Owner",
+                skinUrlOrPathToFile: "",
+                rankColor: "rgba(255, 3, 3, 1)"
+            },
+            {
+                inGameName: "TASTY_BLOOD",
+                rank: "Owner",
+                skinUrlOrPathToFile: "",
+                rankColor: "rgba(255, 3, 3, 1)"
+            },
+            {
+                inGameName: "Empty",
+                rank: "Manager",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Moderator",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        developers: [
+            {
+                inGameName: "EMPTY",
+                rank: "Developer",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Developer",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Webmaster",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Discord manager",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        helpers: [
+            {
+                inGameName: "EMPTY",
+                rank: "Helper++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Helper++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Helper+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Helper+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Helper",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Helper",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ],
+        builders: [
+            {
+                inGameName: "TASTY_BLOOD",
+                rank: "Builder++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "laggglaggg",
+                rank: "Builder++",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Builder+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Builder+",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Builder",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            },
+            {
+                inGameName: "EMPTY",
+                rank: "Builder",
+                skinUrlOrPathToFile: "",
+                rankColor: ""
+            }
+        ]
+    },
+
+    /*
+    Contact form
+    ------------
+    To activate, you need to send the first email via the contact form and confirm it in the email.
+    Emails are sent via https://formsubmit.co/
+    */
+    contactPage: {
+        email: "businessroyalclouds@gmail.com"
+    }
+}
+
+/*If you want to change website color go to /css/global.css and in :root {} is a color pallete (don't change names of variables, change only values)*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*If you want everything to work as it should and you don't understand what is written here, don't touch it :D*/
+
+
+/*Mobile navbar (open, close)*/
+const navbar = document.querySelector(".navbar");
+const navbarLinks = document.querySelector(".links");
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+    navbarLinks.classList.toggle("active");
+})
+
+/*FAQs*/
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+
+accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", () => {
+        accordionItemHeader.classList.toggle("active");
+        const accordionItemBody = accordionItemHeader.nextElementSibling;
+
+        if(accordionItemHeader.classList.contains("active")) accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+        else accordionItemBody.style.maxHeight = "0px";
+    });
+});
+
+/*Config navbar*/
+const serverName = document.querySelector(".server-name");
+const serverLogo = document.querySelector(".logo-img");
+/*Config header*/
+const serverIp = document.querySelector(".minecraft-server-ip");
+const serverLogoHeader = document.querySelector(".logo-img-header");
+const discordOnlineUsers = document.querySelector(".discord-online-users");
+const minecraftOnlinePlayers = document.querySelector(".minecraft-online-players");
+/*Config contact*/
+const contactForm = document.querySelector(".contact-form");
+const inputWithLocationAfterSubmit = document.querySelector(".location-after-submit");
+
+const getDiscordOnlineUsers = async () => {
+    try {
+        const discordServerId = config.serverInfo.discordServerID;
+
+        const apiWidgetUrl = `https://discord.com/api/guilds/${discordServerId}/widget.json`;
+        let response = await fetch(apiWidgetUrl);
+        let data = await response.json();
+
+        if(!data.presence_count) return "None";
+        else return (await data.presence_count);
+    } catch (e) {
+        return "None";
+    }
+}
+
+const getMinecraftOnlinePlayer = async () => {
+    try {
+        const serverIp = config.serverInfo.serverIp;
+
+        const apiUrl = `https://api.mcsrvstat.us/2/${serverIp}`;
+        let response = await fetch(apiUrl);
+        let data = await response.json();
+
+        return data.players.online;
+    } catch (e) {
+        console.log(e);
+        return "None";
+    }
+}
+
+const getUuidByUsername = async (username) => {
+    try {
+        const usernameToUuidApi = `https://api.minetools.eu/uuid/${username}`;
+        let response = await fetch(usernameToUuidApi);
+        let data = await response.json();
+
+        return data.id;
+    } catch (e) {
+        console.log(e);
+        return "None";
+    }
+}
+
+const getSkinByUuid = async (username) => {
+    try {
+        const skinByUuidApi = `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/${await getUuidByUsername(username)}`;
+        let response = await fetch(skinByUuidApi);
+
+        if(response.status === 400) return `https://visage.surgeplay.com/${config.userSKinTypeInAdminTeam}/512/ec561538f3fd461daff5086b22154bce`;
+        else return skinByUuidApi;
+    } catch (e) {
+        console.log(e);
+        return "None";
+    }
+}
+
+/*IP copy only works if you have HTTPS on your website*/
+const copyIp = () => {
+    const copyIpButton = document.querySelector(".copy-ip");
+    const copyIpAlert = document.querySelector(".ip-copied");
+
+    copyIpButton.addEventListener("click", () => {
+        try {
+            navigator.clipboard.writeText(config.serverInfo.serverIp);
+    
+            copyIpAlert.classList.add("active");
+
+            setTimeout(() => {
+                copyIpAlert.classList.remove("active");
+            }, 5000);
+        } catch (e) {
+            console.log(e);
+            copyIpAlert.innerHTML = "An error has occurred!";
+            copyIpAlert.classList.add("active");
+            copyIpAlert.classList.add("error");
+
+            setTimeout(() => {
+                copyIpAlert.classList.remove("active");
+                copyIpAlert.classList.remove("error");
+            }, 5000);
+        }
+    })
+}
+
+const setDataFromConfigToHtml = async () => {
+    /*Set config data to navbar*/
+    serverName.innerHTML = config.serverInfo.serverName;
+    serverLogo.src = `images/` + config.serverInfo.serverLogoImageFileName;
+
+    /*Set config data to header*/
+    serverIp.innerHTML = config.serverInfo.serverIp;
+
+    let locationPathname = location.pathname;
+
+    if(locationPathname == "/" || locationPathname.includes("index")) {
+        copyIp();
+        /*Set config data to header*/
+        serverLogoHeader.src = `images/` + config.serverInfo.serverLogoImageFileName;
+        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
+        minecraftOnlinePlayers.innerHTML = await getMinecraftOnlinePlayer();
+    } else if(locationPathname.includes("rules")) {
+        copyIp();
+    }
+    else if(locationPathname.includes("admin-team")) {
+        for (let team in config.adminTeamPage) {
+            const atContent = document.querySelector(".at-content");
+            
+            const group = document.createElement("div");
+            group.classList.add("group");
+            group.classList.add(team);
+
+            const groupSchema = `
+                <h2 class="rank-title">${team.charAt(0).toUpperCase() + team.slice(1)}</h2>
+                <div class="users">
+                </div>
+            `;
+
+            group.innerHTML = groupSchema;
+
+            atContent.appendChild(group);
+
+            for (let j = 0; j < config.adminTeamPage[team].length; j++) {
+                let user = config.adminTeamPage[team][j];
+                const group = document.querySelector("." + team + " .users");
+
+                const userDiv = document.createElement("div");
+                userDiv.classList.add("user");
+
+                let userSkin = config.adminTeamPage[team][j].skinUrlOrPathToFile;
+
+                if(userSkin == "") userSkin = await getSkinByUuid(user.inGameName);
+                let rankColor = config.atGroupsDefaultColors[team];
+
+                if(user.rankColor != "") {
+                    rankColor = user.rankColor;
+                }
+
+                const userDivSchema = `
+                    <img src="${await (userSkin)}" alt="${user.inGameName}">
+                    <h5 class="name">${user.inGameName}</h5>
+                    <p class="rank ${team}" style="background: ${rankColor}">${user.rank}</p>  
+                `;
+
+                userDiv.innerHTML = userDivSchema;
+                group.appendChild(userDiv);
+            }
+        }
+    } else if(locationPathname.includes("contact")) {
+        contactForm.action = `https://formsubmit.co/${config.contactPage.email}`;
+        discordOnlineUsers.innerHTML = await getDiscordOnlineUsers();
+        inputWithLocationAfterSubmit.value = location.href;
+    }
+}
+
+setDataFromConfigToHtml();
+</script>
+
+  <style>
+    
+
+/*Header*/
+#header {
+    background: url("../../images/header-background.jpg") no-repeat fixed center;
+    min-width: 100%;
+    min-height: 400px;
+    height: 30vh;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+}
+
+#header .content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 150px;
+    width: 100%;
+}
+
+#header .content .info {
+    display: flex;
+    flex-direction: column;
+}
+
+#header .content .info .minecraft-server-ip {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#header .content .info .title {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+#header .content .info .title span {
+    color: var(--main-color);
+}
+
+#header .content .description {
+    color: var(--description-color);
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/*Rules*/
+#rules .content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#rules .warning {
+    background: var(--warning-background);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#rules .warning p {
+    color: var(--warning-color);
+    font-size: 17px;
+}
+
+#rules .warning .icon {
+    border-radius: 5px;
+    background: var(--warning-icon-background);
+    padding: 10px;
+    transition: .2s ease-in-out;
+}
+
+#rules .warning .icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    position: relative;
+    background: var(--red-color);
+    color: var(--white-color);
+    border-radius: 5px;
+}
+
+#rules .warning:hover .icon {
+    transform: scale(1.1);
+}
+
+#rules .rules {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#rules .rules .rules-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white-color);
+    position: relative;
+}
+
+#rules .rules .rules-title::before {
+    content: "";
+    position: absolute;
+    bottom: -9px;
+    left: 0;
+    width: 150px;
+    height: 1px;
+    border-radius: 5px;
+    background: var(--description-color);
+}
+
+#rules .rules .rules-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;
+    background: var(--main-color);
+}
+
+#rules .rules .rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 40px;
+}
+
+#rules .rules .rules-list .rule {
+    color: var(--description-color);
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#rules .rules .rules-list .rule span {
+    color: var(--main-color);
+}
+
+/*Server Join*/
+#join-server{
+    background: var(--stats-background);
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#join-server .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+#join-server .content .section-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--white-color);
+    position: relative;
+    text-align: center;
+}
+
+#join-server .content .section-title span {
+    color: var(--main-color);
+}
+
+#join-server .content .buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#join-server .content .buttons .copy-ip {
+    background: var(--copy-ip-button-background);
+    border: 2px solid var(--main-color);
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: var(--white-color);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#join-server .content .buttons .join-discord {
+    background: var(--how-to-join-button-background);
+    border: 2px solid var(--description-color);
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: var(--description-color);
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#join-server .content .buttons .copy-ip:hover, #join-server .content .buttons .join-discord:hover {
+    opacity: 0.8;
+}
+
+#join-server .content .ip-copied {
+    color: var(--green-color);
+    background: var(--ip-copied-background);
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 5px;
+    font-size: 17px;
+    display: none;
+}
+
+#join-server .content .ip-copied.active {
+    display: flex;
+}
+
+#join-server .content .ip-copied.error {
+    background: var(--warning-background);
+    color: var(--red-color);
+}
+
+
+/*Responsive*/
+/*Header*/
+@media screen and (max-width: 1625px) {
+    #header .content {
+        padding: 150px 90px;
+    }
+}
+
+@media screen and (max-width: 1361px) {
+    #header .content {
+        flex-direction: column;
+        padding: 120px 90px;
+    }
+}
+
+@media screen and (max-width: 819px) {
+    #header .content {
+        padding: 150px 30px;
+    }
+
+    #header .content .info .minecraft-server-ip {
+        font-size: 15px;
+    }
+
+    #header .content .info .title {
+        font-size: 40px;
+    }
+
+    #header .content .info .description {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #header .content {
+        justify-content: start;
+        align-items: start;
+    }
+
+    #header .content .info .title {
+        font-size: 30px;
+    }
+}
+
+/*Rules*/
+@media screen and (max-width: 462px) {
+    #rules .warning {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+/*Server Join*/
+@media screen and (max-width: 380px) {
+    #join-server .content .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
+
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap'); /*font-family: 'Inter', sans-serif;*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --main-font: 'Inter', sans-serif;
+  --main-color: #39BEFF;
+  --background-color: #24272B;
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  --description-color: #D2D0D0;
+
+  --green-color: #4AFF6B;
+  --ip-copied-background: rgba(74, 255, 107, 0.17);
+  --ip-copied-icon-background: rgba(74, 255, 107, 0.5);
+
+  --copy-ip-button-background: rgba(57, 190, 255, 0.7);
+  --how-to-join-button-background: rgba(210, 208, 208, 0.2);
+  --stats-background: rgba(210, 208, 208, 0.05);
+  --stat-icon-background-2: rgba(57, 190, 255, 0.5);
+
+  --scroll-bar: rgba(210, 208, 208, 0.3);
+  --scroll-bar-hover: #555555FF;
+
+  --red-color: #FF7C7C;
+  --warning-background: rgba(255, 124, 124, 0.17);
+  --warning-icon-background: rgba(255, 124, 124, 0.5);
+  --warning-color: #F5C1C1;
+
+  /*Admin-Team rank colors*/
+  --default-rank-color: rgba(210, 208, 208, 0.3);
+}
+
+body {
+  background: var(--background-color);
+  font-family: var(--main-font);
+}
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 150px;
+  background: var(--background-color);
+  transition: 0.3s ease-in-out;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navbar .menu-mobile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .menu-mobile .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar .menu-mobile .logo img {
+  max-width: 40px;
+  height: auto;
+}
+
+.navbar .menu-mobile .logo h3 {
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.navbar .links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .links .link {
+  color: var(--description-color);
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: 0.2s;
+}
+
+.navbar .links .link.active {
+  color: var(--white-color);
+}
+
+.navbar .links .link.active::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  border-radius: 5px;
+  background: var(--main-color);
+}
+
+.navbar .links .link:not(.active):hover {
+  color: var(--white-color);
+}
+
+.navbar .menu-mobile .hamburger {
+  color: var(--white-color);
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+  display: none;
+}
+
+.navbar .menu-mobile .hamburger:hover {
+  opacity: 0.8;
+}
+
+.navbar.active {
+  max-height: 1000px;
+}
+
+.navbar.active .links {
+  opacity: 1;
+  z-index: 2;
+}
+
+/*Footer*/
+#footer {
+  padding: 20px 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#footer p {
+  color: var(--description-color);
+  font-size: 17px;
+}
+
+#footer p span {
+  color: var(--white-color);
+}
+
+#footer .social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+#footer .social-links .link {
+  color: var(--description-color);
+  text-decoration: none;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+#footer .social-links .link:hover {
+  color: var(--white-color);
+}
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--stats-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-bar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scroll-bar-hover);
+}
+
+/*Other*/
+section:not(#header) .content {
+  padding: 90px 150px;
+  width: 100%;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1625px) {
+  .navbar {
+    padding: 20px 90px;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  .navbar {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 867px) {
+  .navbar {
+    flex-direction: column;
+    gap: 30px;
+    max-height: 90px;
+  }
+
+  .navbar .menu-mobile {
+    width: 100%;
+  }
+
+  .navbar .menu-mobile .hamburger {
+    display: flex;
+  }
+
+  .navbar .links {
+    flex-direction: column;
+    order: 2;
+    width: 100%;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1625px) {
+  section:not(#header) .content {
+    padding: 90px;
+  }
+
+  #footer {
+    padding: 20px 90px;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  section:not(#header) .content {
+    padding: 50px 30px;
+  }
+
+  #footer {
+    padding: 20px 30px;
+  }
+}
+
+@media screen and (max-width: 564px) {
+  #footer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+  </style>
+
 </html>
